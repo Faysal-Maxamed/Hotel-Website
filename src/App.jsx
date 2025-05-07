@@ -13,7 +13,7 @@ const App = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#rooms">Rooms</a></li>
           <li><a href="#service">Service</a></li>
-          <li><a href="#contact">Contac</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <button>LogOut</button>
       </div>
@@ -216,7 +216,7 @@ const App = () => {
           What People  <span className="text-orange-500">Say?</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
 
           {/* Testimonial 1 */}
           <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center">
@@ -244,6 +244,34 @@ const App = () => {
 
         </div>
       </div>
+
+      {/* footer section  */}
+
+      <footer className="bg-white text-gray-700 py-12 px-6 md:px-2 0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 pt-8">
+
+          {/* Company Info */}
+          <div>
+            <h1 className="text-2xl font-bold"><span className="text-gray-800">Just</span><span className="text-orange-500">Stay</span></h1>
+            <p className="mt-4 text-sm">Recusandae quos nesciunt veniam eum quia</p>
+            <p className="mt-2 text-sm text-blue-600">shaikhsaaid256@gmail.com</p>
+          </div>
+
+          {/* Quick Links (repeat 4x) */}
+          {[...Array(4)].map((_, index) => (
+            <div key={index}>
+              <h2 className="font-semibold mb-3">Quick Links</h2>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-orange-500 transition">Home</a></li>
+                <li><a href="#" className="hover:text-orange-500 transition">About Us</a></li>
+                <li><a href="#" className="hover:text-orange-500 transition">Rooms</a></li>
+                <li><a href="#" className="hover:text-orange-500 transition">Services</a></li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </footer>
+
     </div>
   )
 }
